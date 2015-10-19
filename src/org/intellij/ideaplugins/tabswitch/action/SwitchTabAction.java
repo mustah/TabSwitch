@@ -15,6 +15,7 @@
  */
 package org.intellij.ideaplugins.tabswitch.action;
 
+import org.intellij.ideaplugins.tabswitch.filefetcher.OpenTabFilesFileFetcher;
 import org.jetbrains.annotations.Nullable;
 
 import com.intellij.ide.ui.UISettings;
@@ -45,7 +46,8 @@ public class SwitchTabAction extends AnAction implements DumbAware {
     VirtualFile[] recentFiles = EditorHistoryManager.getInstance(project).getFiles();
     for (int i = recentFiles.length - 2; i >= 0; i--) {
       VirtualFile file = recentFiles[i];
-      if (showRecentFiles || fileEditorManager.isFileOpen(file)) {
+      if ((showRecentFiles || fileEditorManager.isFileOpen(file))
+              && !OpenTabFilesFileFetcher.ignoredExtensions.contains(file.getExtension())) {
         return file;
       }
     }

@@ -16,7 +16,7 @@ import java.util.Set;
  * Creates a list of {@link VirtualFile} by fetching all the files that are open in tabs in current project.
  */
 public class OpenTabFilesFileFetcher implements FileFetcher<VirtualFile> {
-  private static Set<String> ignoredExtensions = new HashSet<>();
+  public static Set<String> ignoredExtensions = new HashSet<>();
   static {
     ignoredExtensions.add("class");
   }
