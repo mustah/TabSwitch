@@ -2,8 +2,8 @@
 
 <idea-plugin url="https://github.com/mustah/TabSwitch">
   <name>TabSwitch</name>
-  <version>3.0.9</version>
-  <idea-version since-build="141.1532"/>
+  <version>3.1.0</version>
+  <idea-version since-build="141.178.9"/>
 
   <description><![CDATA[
     Open files/tabs switcher to quickly switch between tabs with less keystrokes than
@@ -18,6 +18,7 @@
     ]]>
   </description>
   <change-notes><![CDATA[
+    3.1.0: Ignore class file in Open Files list. Cleaning up some project cache files.<br/>
     3.0.7: Bug-fix: reverse recent files array _before_ checking their validity do be added to list.<br/>
     3.0.6: Remove TabSwitch settings. Is not used anymore.<br/>
     3.0.5: Project is upgraded to use java 7.<br/>

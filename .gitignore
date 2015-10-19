@@ -1,3 +1,7 @@
 *.iws
 out/*
 build/*
+.DS_Store
+*.ipr
+.idea
+*.iml
